@@ -1,0 +1,181 @@
+
+.Back1 {
+	background-color: #BDBDBD;
+	height: 670px;
+}
+.Back2 {
+	background-color: #088A85;
+	height: 110px;	
+}
+.container {
+	margin-top: -90px;
+}
+* {
+	font-family: 'Open Sans';
+}
+p {
+	color: #859799;
+}
+.col {
+	padding: 0px !important;
+}
+/*<!-- .....Caja..De..Contactos..... -->*/
+.NavMenu1 {
+	width: 100%;
+	height: 70px;
+	border: 1px solid #DCDCDC;
+	background-color: #EEE7FC;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.LargoCaja {
+	width: 100%;
+	height: 500px;
+	border: 1px solid #DCDCDC;
+	background-image: url(../image/chat-panel-bg.png);
+	background-color: #E6E6E6;
+}
+.ImgPerfil {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	margin-left: -25px;
+}
+.IP2{
+	margin-right: 0px;
+}
+.Display {
+	display: inline-block;
+}
+.LiMenu1 {
+	display: inline-block;
+}
+.IcoM1 {
+	margin-left: 2%;
+}
+.icon-message {
+	font-size: 20px;
+	color: #403C39;
+}
+.icon-attachment {
+		font-size: 20px;
+	color: #403C39; 
+}
+.icon-dots-three-vertical {
+	font-size: 20px;
+	color: #403C39; 
+}
+.rigth {
+	float: right;
+	margin-top: 5px;
+}
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 0px !important;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 0px !important;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+/*Icono de Busqueda*/
+.Ico { 
+   position: relative; 
+}
+.Ico .icon-search {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+.DText input  {
+	padding-left: 40px; 
+}
+
+/*<!-- .....Panel..Derecho..... -->*/
+.PanelUsers {
+	width: 100%;	
+}
+.Contacto {
+	width: 100%;
+	height: 424px;
+	overflow: scroll;
+}
+.ContenedorCont {
+	width: 100%;
+	height: 70px;
+	border-bottom: solid #BDBDBD 1px;
+}
+.ImgContac2 {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	margin-left: 10px;
+}
+.CajaC {
+	float: left;
+	padding-top: 10px;
+}
+.CUno {
+	width: 15%;
+}
+.CDos {
+	width: 72%;
+}
+.CTres {
+	width: 9%;
+}
+
+/*Panel Derecho*/
+.Chat {
+	width: 100%;
+	height: 70px;
+	border: 1px solid #DCDCDC;
+	background-color: #EEE7FC;
+}
+
+.Dialogo {
+	width: 50%;
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid #8EAAB2;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.Azul {
+	color: #0787CC;
+}
+.Morado {
+	color: #9107CC;
+}
+.Verde {
+	color: #17A807;
+}
+.TimeDer {
+	margin-left: 80%;
+	color: #A69F91;
+}
+.Der {
+	text-align: right;
+	margin-right: 10px;
+	padding-right: 10px;
+	margin-left: 48%;
+}
+.InputAncho {
+	width: 87%;
+}
+.UltimoPanel {
+	display: inline-block;
+}
+.icon-insert_emoticon {
+	color: gray;
+	font-size: 25px;
+	margin-right: 10px;
+}
+.icon-mic {
+	color: gray;
+	font-size: 25px;
+	margin-left: 10px;
+}
