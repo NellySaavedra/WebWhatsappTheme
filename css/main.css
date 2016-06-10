@@ -1,7 +1,7 @@
 
 .Back1 {
 	background-color: #BDBDBD;
-	height: 670px;
+	height: 900px;
 }
 .Back2 {
 	background-color: #088A85;
@@ -99,7 +99,8 @@ p {
 .Contacto {
 	width: 100%;
 	height: 424px;
-	overflow: scroll;
+	overflow: auto;
+	overflow-x: hidden;
 }
 .ContenedorCont {
 	width: 100%;
@@ -164,7 +165,8 @@ p {
 	margin-left: 48%;
 }
 .InputAncho {
-	width: 87%;
+	width: 76%;
+	margin-right: 2%;
 }
 .UltimoPanel {
 	display: inline-block;

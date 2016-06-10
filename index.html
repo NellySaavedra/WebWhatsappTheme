@@ -21,7 +21,7 @@
 		<div class="container-fluid Back2"></div>
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-5 col"><!-- .....panel..Derecho..... -->
+					<div class="col-lg-5 col"><!-- .....panel..Izquierdo..... -->
 						<nav class="NavMenu1">
 							<ul class="UlMenu1">
 								<li  class="LiMenu1"><a href=""><img src="image/gian.jpg" class="ImgPerfil"></li></a>
@@ -115,7 +115,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-7 col"><!-- .....Panel..Derecho..... -->
+					<div class="col-lg-7 col hidden-xs	"><!-- .....Panel..Derecho..... -->
 						<div class="Chat">
 							<div class="CajaC CUno ImgCont">
 								<a name="Peru"><img src="image/logocodeacademy.png" alt="" class="ImgContac2"></a>
@@ -130,7 +130,7 @@
 							</div>
 						</div>
 						<div class="LargoCaja"><!-- .....Caja..De..Dialogo..... -->
-							<div class="Contacto">
+							<div class="Contacto" id="lista">
 									<div class="Dialogo">
 										<p class="Azul">Andrea Lamas</p>
 										<p>Chicos han visto el nuevo corte de Aldo?</p>
@@ -146,11 +146,12 @@
 										<p>jajaja! Siii!! Finalmente se lo cortó</p>
 										<p class="TimeDer">11:14</p>
 									</div>
-									<div class="Dialogo Der">
+									<div id="Caja" class="Dialogo Der">
+	<!-- ..............Mis.Cajas....................... -->
 										<p>Antes parrecía mufasa jajajaja</p>
-										<p class="TimeDer">11:16</p>
+										<p class="TimeDer"><a href="">11:16</a></p>
 									</div>
-									<div class="Dialogo Der">
+<!-- 									<div class="Dialogo Der">
 										<p>Ahora sí está descente</p>
 										<p class="TimeDer">11:16</p>
 									</div>
@@ -168,11 +169,11 @@
 										<p class="Verde">Maria Paula Rivarola</p>
 										<p>Nunca!!! Juan Diego es único</p>
 										<p class="TimeDer">11:31</p>
-									</div>
+									</div> -->
 								</div>
 								<div class="well">
 									<div class="icon-insert_emoticon UltimoPanel"></div>
-									<input type="search" class="form-control InputAncho UltimoPanel" id="Mensaje" placeholder="Escribir mensaje">
+									<input type="search" class="form-control InputAncho UltimoPanel" id="Mensaje" placeholder="Escribir mensaje"><input type="button" class="boton" id="btn-agregar" value="Enviar">
 									<div class="icon-mic UltimoPanel"></div>
 								</div>
 							</div>
@@ -181,20 +182,8 @@
 				</div>
 			</div>
 		</section>
-		
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
+<script src="js/jquery.js"></script>		
+<script src="js/main.js"></script>
 
 	</body>
 </html>
