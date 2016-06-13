@@ -13,6 +13,10 @@
 	  	<link rel="stylesheet" href="css/icomoon.css" type="text/css">
 	  	<link rel="stylesheet" href="css/queries.css" type="text/css">
 	  	<link rel="stylesheet" href="css/main.css" type="text/css">
+
+	  	<!-- Para efectos wow -->
+        <link rel="stylesheet" href="css/animate.min.css" type="text/css">  
+
 	</head>
 	<body>
 		<header>
@@ -33,13 +37,67 @@
 							<div class="well">
 								<div class="Ico DText">
     								<i class="icon-search"></i>
-    								<input type="text" class="form-control" id="search" placeholder="Buscar o empezar un Chat nuevo"/>
+    								<input id="searchTerm" type="text" class="form-control" placeholder="Buscar o empezar un Chat nuevo" onkeyup="doSearch()"/>
 								</div>
 							</div>
 							<div class="PanelUsers"> 
 								<div class="Contacto">
-									<div class="ContenedorCont btn-default">
-										<div class="CajaC CUno ImgCont"><a href="#Peru"><img src="image/logocodeacademy.png" alt="" class="ImgContac2"></a></div>
+									<table id="datos" class="wow fadeInDownBig">
+										<tr>
+											<!-- <td></td>
+											<td></td>
+											<td></td> -->
+										</tr>
+										<tr class="ContenedorCont">
+											<td class="CUno "><img src="image/logocodeacademy.png" alt="" class="ImgContac2"></td>
+											<td class="CDos"><b>Labotoria Perú</b><br>Aldo: Dale dale!</td>
+											<td class="CTres">14:25</td>
+										</tr>
+										<tr class="ContenedorCont">
+											<td class="CUno"><img src="image/raymi.jpg" alt="" class="ImgContac2"></td>
+											<td class="CDos"><b>Raymi Saldomando</b><br>La clase va bien!</td>
+											<td class="CTres">11:25</td>
+										</tr>
+										<tr class="ContenedorCont">
+											<td class="CUno"><img src="image/mariana.jpg" alt="" class="ImgContac2"></td>
+											<td class="CDos"><b>Mariana Costa</b><br>El panel de speakers está buenazo</td>
+											<td class="CTres">09:25</td>
+										</tr>
+										<tr class="ContenedorCont">
+											<td class="CUno"><img src="image/anamaria.jpg" alt="" class="ImgContac2"></td>
+											<td class="CDos"><b>Ana María Martínez Franklin</b><br>Pues dale chamo!!</td>
+											<td class="CTres">Ayer</td>
+										</tr>
+										<tr class="ContenedorCont">
+											<td class="CUno"><img src="image/rodulfo.jpg" alt="" class="ImgContac2"></td>
+											<td class="CDos"><b>Rodulfo Prieto</b><br>¿Cómo van las chicas?</td>
+											<td class="CTres">Martes</td>
+										</tr>
+										<tr class="ContenedorCont">
+											<td class="CUno"><img src="image/andrea.jpg" alt="" class="ImgContac2"></td>
+											<td class="CDos"><b>Andrea Lamas</b><br>hoy me toca clases de canto, Yee!</td>
+											<td class="CTres">Lunes</td>
+										</tr>
+										<tr class="ContenedorCont">
+											<td class="CUno"><img src="image/mariapaula.jpg" alt="" class="ImgContac2"></td>
+											<td class="CDos"><b>Maria Paula Rivera</b><br>Lunes</td>
+											<td class="CTres">14:25</td>
+										</tr>
+										<tr class="ContenedorCont">
+											<td class="CUno"><img src="image/katy.jpg" alt="" class="ImgContac2"></td>
+											<td class="CDos"><b>Katy Sanchez</b><br>No te Preocupes, tengo el salón bajo control</td>
+											<td class="CTres">13/01/16</td>
+										</tr>
+										<tr class="ContenedorCont">
+											<td class="CUno"><img src="image/aldo.jpg" alt="" class="ImgContac2"></td>
+											<td class="CDos"><b>Aldo Alfaro</b><br>Van a comer?</td>
+											<td class="CTres">03/01/16</td>
+										</tr>
+									</table>
+									<!-- <div class="ContenedorCont btn-default" id="labPeru">
+										<div class="CajaC CUno ImgCont">
+											<img src="image/logocodeacademy.png" alt="" class="ImgContac2">
+										</div>
 										<div class="CajaC CDos InfoCont">
 										<h5><b>Labotoria Perú<b></h5>
 										<h6>Aldo: Dale dale!</h6>
@@ -47,75 +105,90 @@
 										<div class="CajaC CTres HoraConec"><h6>14:25</h6>
 										</div>
 									</div>
-									<div class="ContenedorCont btn-default">
-										<div class="CajaC CUno ImgCont"><img src="image/raymi.jpg" alt="" class="ImgContac2"></div>
+									<div class="ContenedorCont btn-default id" id="Raymi">
+										<div class="CajaC CUno ImgCont">
+											<img src="image/raymi.jpg" alt="" class="ImgContac2">
+										</div>
 										<div class="CajaC CDos InfoCont">
 										<h5><b>Raymi Saldomando<b></h5>
 										<h6>La clase va bien!</h6>
 										</div>
 										<div class="CajaC CTres HoraConec"><h6>11:25</h6></div>
 									</div>		
-									<div class="ContenedorCont btn-default">
-										<div class="CajaC CUno ImgCont"><img src="image/mariana.jpg" alt="" class="ImgContac2"></div>
+									<div class="ContenedorCont btn-default" id="Mariana">
+										<div class="CajaC CUno ImgCont">
+											<img src="image/mariana.jpg" alt="" class="ImgContac2"></div>
 										<div class="CajaC CDos InfoCont">
-										<h5><b>Miriana Costa<b></h5>
+										<h5><b>Mariana Costa<b></h5>
 										<h6>El panel de speakers está buenazo</h6>
 										</div>
 										<div class="CajaC CTres HoraConec"><h6>09:25</h6></div>
 									</div>
-									<div class="ContenedorCont btn-default">
-										<div class="CajaC CUno ImgCont"><img src="image/anamaria.jpg" alt="" class="ImgContac2"></div>
+									<div class="ContenedorCont btn-default" id="Ana">
+										<div class="CajaC CUno ImgCont">
+											<img src="image/anamaria.jpg" alt="" class="ImgContac2">
+										</div>
 										<div class="CajaC CDos InfoCont">
 										<h5><b>Ana María Martínez Franklin<b></h5>
 										<h6>Pues dale chamo!!</h6>
 										</div>
 										<div class="CajaC CTres HoraConec"><h6>Ayer</h6></div>
 									</div>
-									<div class="ContenedorCont btn-default">
-										<div class="CajaC CUno ImgCont"><img src="image/rodulfo.jpg" alt="" class="ImgContac2"></div>
+									<div class="ContenedorCont btn-default" id="Rodulfo">
+										<div class="CajaC CUno ImgCont">
+											<img src="image/rodulfo.jpg" alt="" class="ImgContac2">
+										</div>
 										<div class="CajaC CDos InfoCont">
 										<h5><b>Rodulfo Prieto<b></h5>
 										<h6>¿Cómo van las chicas?</h6>
 										</div>
 										<div class="CajaC CTres HoraConec"><h6>Martes</h6></div>
 									</div>
-									<div class="ContenedorCont btn-default">
-										<div class="CajaC CUno ImgCont"><img src="image/andrea.jpg" alt="" class="ImgContac2"></div>
+									<div class="ContenedorCont btn-default" id="Andrea">
+										<div class="CajaC CUno ImgCont">
+											<img src="image/andrea.jpg" alt="" class="ImgContac2">
+										</div>
 										<div class="CajaC CDos InfoCont">
 										<h5><b>Andrea Lamas<b></h5>
 										<h6>hoy me toca clases de canto, Yee!</h6>
 										</div>
 										<div class="CajaC CTres HoraConec"><h6>Lunes</h6></div>
 									</div>
-									<div class="ContenedorCont btn-default">
-										<div class="CajaC CUno ImgCont"><img src="image/mariapaula.jpg" alt="" class="ImgContac2"></div>
+									<div class="ContenedorCont btn-default" id="Maria">
+										<div class="CajaC CUno ImgCont">
+											<img src="image/mariapaula.jpg" alt="" class="ImgContac2">
+										</div>
 										<div class="CajaC CDos InfoCont">
 										<h5><b>Maria Paula Rivera<b></h5>
 										<h6>Lunes</h6>
 										</div>
 										<div class="CajaC CTres HoraConec"><h6>14:25</h6></div>
 									</div>
-									<div class="ContenedorCont btn-default">
-										<div class="CajaC CUno ImgCont"><img src="image/katy.jpg" alt="" class="ImgContac2"></div>
+									<div class="ContenedorCont btn-default" id="Katy">
+										<div class="CajaC CUno ImgCont">
+											<img src="image/katy.jpg" alt="" class="ImgContac2">
+										</div>
 										<div class="CajaC CDos InfoCont">
 										<h5><b>Katy Sanchez<b></h5>
 										<h6>No te Preocupes, tengo el salón bajo control</h6>
 										</div>
 										<div class="CajaC CTres HoraConec"><h6>13/01/16</h6></div>
 									</div>
-									<div class="ContenedorCont btn-default">		
-										<div class="CajaC CUno ImgCont"><img src="image/aldo.jpg" alt="" class="ImgContac2"></div>
+									<div class="ContenedorCont btn-default" id="Aldo">		
+										<div class="CajaC CUno ImgCont">
+											<img src="image/aldo.jpg" alt="" class="ImgContac2">
+										</div>
 										<div class="CajaC CDos InfoCont">
 										<h5><b>Aldo Alfaro<b></h5>
 										<h6>Van a comer?</h6>
 										</div>
 										<div class="CajaC CTres HoraConec"><h6>03/01/165</h6></div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-7 col hidden-xs	"><!-- .....Panel..Derecho..... -->
+					<div class="col-lg-7 col panelChat"><!-- .....Panel..Derecho..... -->
 						<div class="Chat">
 							<div class="CajaC CUno ImgCont">
 								<a name="Peru"><img src="image/logocodeacademy.png" alt="" class="ImgContac2"></a>
@@ -131,7 +204,7 @@
 						</div>
 						<div class="LargoCaja"><!-- .....Caja..De..Dialogo..... -->
 							<div class="Contacto" id="lista">
-									<div class="Dialogo">
+									<!-- <div class="Dialogo">
 										<p class="Azul">Andrea Lamas</p>
 										<p>Chicos han visto el nuevo corte de Aldo?</p>
 										<p class="TimeDer">11:12</p>
@@ -145,8 +218,8 @@
 										<p class="Verde">Maria Paula</p>
 										<p>jajaja! Siii!! Finalmente se lo cortó</p>
 										<p class="TimeDer">11:14</p>
-									</div>
-									<div id="Caja" class="Dialogo Der">
+									</div> -->
+									<div id="Caja" class="Der">
 	<!-- ..............Mis.Cajas....................... -->
 										<p>Antes parrecía mufasa jajajaja</p>
 										<p class="TimeDer"><a href="">11:16</a></p>
@@ -172,8 +245,8 @@
 									</div> -->
 								</div>
 								<div class="well">
-									<div class="icon-insert_emoticon UltimoPanel"></div>
-									<input type="search" class="form-control InputAncho UltimoPanel" id="Mensaje" placeholder="Escribir mensaje"><input type="button" class="boton" id="btn-agregar" value="Enviar">
+									<div class="icon-insert_emoticon UltimoPanel cajaEmoticon"></div>
+									<input type="search" class="form-control InputAncho UltimoPanel" id="Mensaje" placeholder="Escribir mensaje"><input type="button" class="boton UltimoPanel" id="btn-agregar" value="Enviar">
 									<div class="icon-mic UltimoPanel"></div>
 								</div>
 							</div>
@@ -182,8 +255,15 @@
 				</div>
 			</div>
 		</section>
-<script src="js/jquery.js"></script>		
-<script src="js/main.js"></script>
+
+	<script src="js/jquery.js"></script>		
+	<script src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+   	<script>
+	    new WOW().init();
+	</script>
 
 	</body>
 </html>
