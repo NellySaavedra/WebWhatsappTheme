@@ -28,11 +28,36 @@
         }
 
 // ------------------------------
-
 //Ligar la imagen del contacto a la caja de conversación
 
-// ------------------------------
 
+var img = ["logocodeacademy.png", "raymi.jpg", 
+           "mariana.jpg", "anamaria.jpg", 
+           "rodulfo.jpg", "andrea.jpg", 
+           "mariapaula.jpg", "katy.jpg", "aldo.jpg"];
+
+var contactos = ["Laboratoria Perú", "Raymi Saldomando", 
+                "Mariana Costa", "Ana María Martínez Franklin", 
+                "Rodulfo Prieto", "Andrea Lamas", 
+                "Maria Paula Rivera", "Katy Sanchez",
+                "Aldo Alfaro"];
+
+var estado = ["Nos vemos mañana", "No creo verlo", 
+              "Es transformación", "Amo el quesito", 
+              "Comeremos más", "Vamos a viajar", 
+              "Necesito vacaciones", "Conocer el mundo",
+              "Spartan"];
+
+$(document).ready(function(){
+    $(".ContenedorCont").click(function(){
+        var data = $(this).attr("data");
+        $(".Der").remove();//Limpia el panel al dar click en otro usuario
+        $("#CUno").html('<img src="image/' + img[data] + '" class="ImgContac2">');//Se agrega imagen a panel de conversación
+        $("#CDos").html(contactos[data] + '<br>' + estado[data]);//Se agraga nombre de usuario en panel de conversación
+    });
+});
+
+// ------------------------------
 // Input para añadir mensajes a la conversación
 
 (function(){
@@ -61,12 +86,17 @@
     };
     //Agregar mensaje
     nuevoMensaje.addEventListener("click", agregarMensaje);
+    //Agregar mensaje con Enter
+    $(document).keypress(function(e){
+        if(e.which == 13){
+            agregarMensaje();
+        };
+    });
 }());
 // ------------------------------
 
 
-
-
+        
 
 
 
