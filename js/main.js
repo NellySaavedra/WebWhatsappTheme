@@ -29,8 +29,6 @@
 
 // ------------------------------
 //Ligar la imagen del contacto a la caja de conversación
-
-
 var img = ["logocodeacademy.png", "raymi.jpg", 
            "mariana.jpg", "anamaria.jpg", 
            "rodulfo.jpg", "andrea.jpg", 
@@ -49,11 +47,11 @@ var estado = ["Nos vemos mañana", "No creo verlo",
               "Spartan"];
 
 $(document).ready(function(){
-    $(".ContenedorCont").click(function(){
-        var data = $(this).attr("data");
+    $(".ContenedorCont").click(function(){//clase de los contactos
+        var data = $(this).attr("data");// todos los contactos tienen ese un numero data empezando por cero
         $(".Der").remove();//Limpia el panel al dar click en otro usuario
         $("#CUno").html('<img src="image/' + img[data] + '" class="ImgContac2">');//Se agrega imagen a panel de conversación
-        $("#CDos").html(contactos[data] + '<br>' + estado[data]);//Se agraga nombre de usuario en panel de conversación
+        $("#CDos").html('<b>' + contactos[data] + '</b>'+ '<br>' + estado[data]);//Se agraga nombre de usuario en panel de conversación
     });
 });
 
@@ -70,19 +68,23 @@ $(document).ready(function(){
     var agregarMensaje = function(){
         var contenido = mensajeIntup.value,
             nuevoContenido = document.createElement("Caja"), //Div "Burbuja"
-            enlace = document.createElement("p"), //Contenido de "Burbuja"
+            // enlace = document.createElement("p"), //Contenido de "Burbuja"
+
+            BurbujaConHora = document.getElementById('Mensaje').value;//Para la hora. 
+            nuevoContenido.innerHTML ='<div class= "Der">'+ BurbujaConHora + '<br>' + '<span>'+ moment().format("HH:mm")+'</span>'+'</div>';
+
             contText = document.createTextNode(contenido);
 
             //Para agregar contenido al panel de convesación
-            enlace.appendChild(contText);
+            // enlace.appendChild(contText);
             //Para agregar p a id de Caja
-            nuevoContenido.appendChild(enlace);
+            // nuevoContenido.appendChild(enlace);
             //Para agregar el nuevo mensaje al panel de conversación
             lista.appendChild(nuevoContenido);
             //Para limpiar input
             mensajeIntup.value = "";
             //Estilo de burbuja: a <p> que es "enlace" se le aplica "Der" que es el estilo de div.
-            enlace.setAttribute("class", "Der");
+            // BurbujaConHora.setAttribute("class", "Der");
     };
     //Agregar mensaje
     nuevoMensaje.addEventListener("click", agregarMensaje);
@@ -93,8 +95,12 @@ $(document).ready(function(){
         };
     });
 }());
-// ------------------------------
+//Funcion que envia a la ventana de chat el mensaje del usuario//
 
+// ------------------------------
+// Guardar conversación
+
+// ------------------------------
 
         
 

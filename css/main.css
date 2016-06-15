@@ -166,6 +166,9 @@ tr:hover {
 	margin-top: 10px;
 	padding-top: 10px;
 	padding-left: 10px;
+	color: #859799;
+	font-weight: bold;
+	font-size: 16px;
 }
 .Azul {
 	color: #0787CC;
@@ -197,4 +200,9 @@ tr:hover {
 	color: gray;
 	font-size: 25px;
 	margin-left: 10px;
+}
+span {
+	font-size: 10px;
+	font-weight: bold;
+	color: #A6BA12;
 }
