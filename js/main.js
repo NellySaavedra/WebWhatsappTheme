@@ -40,11 +40,11 @@ var contactos = ["Laboratoria Perú", "Raymi Saldomando",
                 "Maria Paula Rivera", "Katy Sanchez",
                 "Aldo Alfaro"];
 
-var estado = ["Nos vemos mañana", "No creo verlo", 
-              "Es transformación", "Amo el quesito", 
-              "Comeremos más", "Vamos a viajar", 
-              "Necesito vacaciones", "Conocer el mundo",
-              "Spartan"];
+var estado = ["Griss, Lupis, Eli, Elsa, Yo", "En línea", 
+              "En línea", "En línea", 
+              "En línea", "En línea", 
+              "En línea", "En línea",
+              "En línea"];
 
 $(document).ready(function(){
     $(".ContenedorCont").click(function(){//clase de los contactos
@@ -68,23 +68,13 @@ $(document).ready(function(){
     var agregarMensaje = function(){
         var contenido = mensajeIntup.value,
             nuevoContenido = document.createElement("Caja"), //Div "Burbuja"
-            // enlace = document.createElement("p"), //Contenido de "Burbuja"
-
-            BurbujaConHora = document.getElementById('Mensaje').value;//Para la hora. 
+            BurbujaConHora = document.getElementById('Mensaje').value; 
             nuevoContenido.innerHTML ='<div class= "Der">'+ BurbujaConHora + '<br>' + '<span>'+ moment().format("HH:mm")+'</span>'+'</div>';
-
             contText = document.createTextNode(contenido);
-
-            //Para agregar contenido al panel de convesación
-            // enlace.appendChild(contText);
-            //Para agregar p a id de Caja
-            // nuevoContenido.appendChild(enlace);
             //Para agregar el nuevo mensaje al panel de conversación
             lista.appendChild(nuevoContenido);
             //Para limpiar input
             mensajeIntup.value = "";
-            //Estilo de burbuja: a <p> que es "enlace" se le aplica "Der" que es el estilo de div.
-            // BurbujaConHora.setAttribute("class", "Der");
     };
     //Agregar mensaje
     nuevoMensaje.addEventListener("click", agregarMensaje);
@@ -99,7 +89,21 @@ $(document).ready(function(){
 
 // ------------------------------
 // Guardar conversación
-
+var agregarMensajeAnterior = function(){
+    for (i=0; i<**.length; i++){
+        var temp = **[i];
+        var contacto = $('**').text();
+        if (contacto==temp.**){
+            var MensajeAnterior = temp.**
+            console.log(MensajeAnterior)
+            var nuevoMensaje = document.createElement("div"),
+                contenido = document.createTextNode(MensajeAnterior);
+            $(nuevoMensaje).addClass("Der");
+            nuevoMensaje.appendChild(contenido);
+            Caja.appendChild(nuevoMensaje);
+        }
+    }
+};
 // ------------------------------
 
         
